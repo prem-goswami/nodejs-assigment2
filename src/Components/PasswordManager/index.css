@@ -1,0 +1,124 @@
+.bgContainer {
+  min-height: 100vh;
+  padding: 50px;
+  background-color: #9ba9eb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.appLogo {
+  background-color: transparent;
+  width: 150px;
+  height: 50px;
+  margin-bottom: 20px;
+}
+
+.addPswdContainer {
+  background-color: #5763a5;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  width: 1200px;
+  height: 450px;
+}
+
+.addPswd {
+  background-color: #454f84;
+  padding: 15px;
+  width: 500px;
+  border-radius: 10px;
+}
+
+.heading {
+  color: white;
+  font-size: 15px;
+  font-family: 'roboto';
+  margin-bottom: 20px;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  align-items: center;
+  margin-bottom: 30px;
+  width: 70%;
+  height: 40px;
+  padding: 10px;
+}
+
+.inputImage {
+  background-color: transparent;
+  margin-right: 15px;
+  height: 30px;
+  width: 30px;
+}
+
+.inputBox {
+  height: 25px;
+  outline: none;
+  border-width: 0px;
+}
+
+.buttonContainer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 600px;
+}
+.addButton {
+  background-color: blue;
+  color: white;
+  border-width: 0px;
+  height: 30px;
+  width: 70px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.imageSizing {
+  width: 500px;
+}
+
+.displayPswdContainer {
+  margin-top: 10px;
+  background-color: #5763a5;
+  padding: 30px;
+  width: 1200px;
+  height: 450px;
+}
+
+.headerContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.card2Head {
+  color: white;
+  font-size: 20px;
+}
+
+.countText {
+  border-color: white;
+  font-size: 10px;
+  color: white;
+  background-color: transparent;
+}
+.searchLogo {
+  height: 20px;
+  width: 20px;
+}
+.searchContainer {
+  background-color: white;
+  height: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 15px;
+}
+
+.searchBox {
+  outline: none;
+  border-width: 0px;
+}

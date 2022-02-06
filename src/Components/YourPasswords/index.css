@@ -1,0 +1,22 @@
+.listContainer {
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.detailsContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.deleteIcon {
+  height: 20px;
+  width: 20px;
+}
+
+.deleteButt {
+  background-color: transparent;
+  border-width: 0px;
+}
