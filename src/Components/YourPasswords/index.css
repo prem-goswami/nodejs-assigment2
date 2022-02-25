@@ -1,14 +1,55 @@
+.bgContainer2 {
+  border-style: solid;
+  border-color: white;
+  border-width: 2px;
+  background-color: transparent;
+  height: 50%;
+  width: 70%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 .listContainer {
+  width: 60%;
   background-color: transparent;
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: space-between;
   padding: 10px;
+}
+
+.initialsContainer {
+  background-color: #10b981;
+  display: flex;
+  justify-content: center;
+  border-radius: 25px;
+  height: 50px;
+  width: 50px;
+}
+
+.initials {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .detailsContainer {
   display: flex;
   flex-direction: column;
+  color: white;
+}
+
+.sizing {
+  margin: 0px;
+  margin-left: 10px;
+}
+
+p {
+  color: white;
+  font-family: 'roboto';
 }
 
 .deleteIcon {
@@ -17,6 +58,12 @@
 }
 
 .deleteButt {
+  align-items: flex-end;
   background-color: transparent;
   border-width: 0px;
+}
+
+.starsIMage {
+  width: 80px;
+  height: 10px;
 }

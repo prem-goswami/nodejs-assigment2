@@ -1,18 +1,48 @@
 import './index.css'
 
 const YourPasswords = props => {
-  const userDetails = props
-  const {website, username, password} = userDetails
+  const {userDetails, deleteUserDetails, checkBox, listLength} = props
+  const {id, website, username, password} = userDetails
+  const initials = website[0].toUpperCase()
 
-  return (
+  const onClickDelete = () => {
+    deleteUserDetails(id)
+  }
+
+  const renderNotFoundContainer = () => (
+    <div className="notFoundContainer">
+      <img
+        src="https://assets.ccbp.in/frontend/react-js/no-passwords-img.png"
+        alt="no passwords"
+      />
+      <p>No Passwords</p>
+    </div>
+  )
+
+  const renderYourPasswordsContainer = () => (
     <li className="listContainer">
-      <h1>{website}</h1>
-      <div className="detailsContainer">
-        <p>{website}</p>
-        <p>{username}</p>
-        <p>{password}</p>
+      <div className="initialsContainer">
+        <h1 className="initials">{initials}</h1>
       </div>
-      <button type="button" className="deleteButt">
+      <div className="detailsContainer">
+        <p className="sizing">{website}</p>
+        <p className="sizing">{username}</p>
+        {checkBox ? (
+          <p className="sizing">{password}</p>
+        ) : (
+          <img
+            src="https://assets.ccbp.in/frontend/react-js/password-manager-stars-img.png"
+            alt="stars"
+            className="starsIMage"
+          />
+        )}
+      </div>
+      <button
+        type="button"
+        className="deleteButt"
+        testid="delete"
+        onClick={onClickDelete}
+      >
         <img
           src="https://assets.ccbp.in/frontend/react-js/password-manager-delete-img.png"
           alt="delete"
@@ -20,6 +50,14 @@ const YourPasswords = props => {
         />
       </button>
     </li>
+  )
+
+  return (
+    <div className="bgContainer2">
+      {listLength > 0
+        ? renderYourPasswordsContainer()
+        : renderNotFoundContainer()}
+    </div>
   )
 }
 
