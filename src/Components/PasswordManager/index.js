@@ -50,6 +50,7 @@ class PasswordManager extends Component {
       websiteText: '',
       usernameText: '',
       passwordText: '',
+      listLength: prevState.listLength + 1,
     }))
   }
 
@@ -118,11 +119,38 @@ class PasswordManager extends Component {
     }))
   }
 
+  renderNotFoundContainer = () => (
+    <div className="notFoundContainer">
+      <img
+        src="https://assets.ccbp.in/frontend/react-js/no-passwords-img.png"
+        alt="no passwords"
+      />
+      <p>No Passwords</p>
+    </div>
+  )
+
+  renderPasswordContainer = () => {
+    const {userList, checkBox} = this.state
+
+    return (
+      <ul className="listContainer">
+        {userList.map(eachItem => (
+          <YourPasswords
+            key={eachItem.id}
+            userDetails={eachItem}
+            checkBoxClicked={this.checkBoxClicked}
+            deleteUserDetails={this.deleteUserDetails}
+            checkBox={checkBox}
+          />
+        ))}
+      </ul>
+    )
+  }
+
   render() {
     const {userList, checkBox} = this.state
     const listLength = userList.length
     console.log(listLength)
-
     return (
       <div className="bgContainer">
         <img
@@ -151,18 +179,9 @@ class PasswordManager extends Component {
           <input type="checkbox" id="check" onClick={this.checkBoxClicked} />
 
           <hr />
-          <ul className="listContainer">
-            {userList.map(eachItem => (
-              <YourPasswords
-                key={eachItem.id}
-                userDetails={eachItem}
-                checkBoxClicked={this.checkBoxClicked}
-                deleteUserDetails={this.deleteUserDetails}
-                checkBox={checkBox}
-                listLength={listLength}
-              />
-            ))}
-          </ul>
+          {listLength >= 1
+            ? this.renderPasswordContainer()
+            : this.renderNotFoundContainer()}
         </div>
       </div>
     )

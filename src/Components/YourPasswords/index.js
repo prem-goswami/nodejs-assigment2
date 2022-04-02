@@ -9,16 +9,6 @@ const YourPasswords = props => {
     deleteUserDetails(id)
   }
 
-  const renderNotFoundContainer = () => (
-    <div className="notFoundContainer">
-      <img
-        src="https://assets.ccbp.in/frontend/react-js/no-passwords-img.png"
-        alt="no passwords"
-      />
-      <p>No Passwords</p>
-    </div>
-  )
-
   const renderYourPasswordsContainer = () => (
     <li className="listContainer">
       <div className="initialsContainer">
@@ -52,13 +42,7 @@ const YourPasswords = props => {
     </li>
   )
 
-  return (
-    <div className="bgContainer2">
-      {listLength > 0
-        ? renderYourPasswordsContainer()
-        : renderNotFoundContainer()}
-    </div>
-  )
+  return <div className="bgContainer2">{renderYourPasswordsContainer()}</div>
 }
 
 export default YourPasswords
